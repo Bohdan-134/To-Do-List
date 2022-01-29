@@ -1,0 +1,107 @@
+@import url("./animation/animation.css");
+@import url("./null-style.css");
+@import url("container-tasks.css");
+
+body {
+    --text-color: #65685C;
+    --bg-color: #F7F7F7;
+    --grey-color: #CFCFCF;
+    --theme-color: #B5D43C;
+    --hover-color: #9ab531;
+    background-color: var(--bg-color);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--text-color);
+}
+
+.header .h1 {
+    font-size: 35px;
+    color: var(--bg-color);
+    animation: tracking-in-expand-fwd .7s .5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+/* main */
+.main {
+    width: 100%;
+    height: calc(100% - 130px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* footer */
+.footer{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* form */
+.todo-form {
+    display: flex;
+}
+
+.todo-input {
+    width: 450px;
+    height: 40px;
+    padding: 5px 10px;
+    font-size: 15px;
+    margin-right: 10px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    position: relative; 
+    animation: upwards 0.7s 1.9s both;
+}
+
+.todo-add-task-btn {
+    width: 40px;
+    background-color: var(--theme-color);
+    color: var(--bg-color);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; 
+    animation: upwards 0.7s 2.3s both;
+}
+
+.todo-add-task-btn:hover{
+    background-color: var(--hover-color);
+}
+
+@keyframes upwards {
+    0%{
+        bottom: -70px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
+
+/* info */
+
+#todo-info {
+    font-size: 25px;
+    color: var(--bg-color);
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}

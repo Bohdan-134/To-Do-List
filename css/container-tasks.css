@@ -1,0 +1,74 @@
+.container-tasks {
+    width: 500px;
+    height: 80%;
+    overflow-y: scroll;    
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    min-height: 50px;
+    padding: 5px 0px;
+    background-color: var(--theme-color);
+    margin: 5px 0;
+}
+
+.task:hover{
+    background-color: var(--hover-color);
+}
+
+.task[data-check="true"]:hover{
+    background-color: var(--theme-color);
+}
+
+.task .task-text__wrapper .task-text,
+.task .task-text__wrapper input{
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.task .task-text__wrapper .task-text{
+    display: block;
+    width: 430px;
+    max-width: 430px;
+    text-align: left;
+}
+
+.task .task-text__wrapper input {
+    background-color: transparent;
+    width: 430px;
+}
+
+.task .task-delete {
+    width: 10px;
+    height: 10px;
+    background-color: #cb3d3d;
+}
+
+.task-edit .task-text__wrapper .task-text {
+    color: var(--grey-color);
+    opacity: .7;
+}
+
+.task-edit .task-checkbox {
+    background-color: var(--grey-color);
+}
+
+.todo-checked {
+    width: 10px;
+    height: 10px;
+    background-color: #eddf27;
+    cursor: pointer;
+    position: relative;
+}
+
+.todo-checked:active,
+.task .task-delete:active{
+    transform: scale(0.5);
+}
+
+.task-checked span{
+    opacity: .5;
+}
